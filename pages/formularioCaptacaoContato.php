@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Gerar um código único
     $codigoSolicitacao = uniqid(); // Gera um ID único baseado no timestamp
     
-    $to = "gabrielcastromateusg@gmail.com"; // Email para Contato
+    $to = "email@gmail.com"; // Email para Contato
     $subject = "SOLICITAÇÃO DE CONTATO - $assuntoContato";
 
     // Corpo do e-mail de contato
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $subjectCliente = "Solicitação de Contato - $assuntoContato";
         $bodyCliente = "Prezado(a) $nome,\n\nAgradecemos por entrar em contato conosco. Em breve, entraremos em contato com você para maiores detalhes sobre nossos serviços e esclarecimento de todas as suas dúvidas.\n\nO Código do Contato: #$codigoSolicitacao\n\nAtenciosamente,\nGabriel Castro Mateus | DSNIX";
 
-        $headersCliente = "From: gabrielcastromateusg@gmail.com\r\n";
+        $headersCliente = "From: email@gmail.com\r\n";
         $headersCliente .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
         if(mail($email, $subjectCliente, $bodyCliente, $headersCliente)){
