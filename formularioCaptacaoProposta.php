@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $codigoSolicitacao = uniqid(); // Gera um ID único baseado no timestamp
     
    
-    $to = "email@gmail.com"; // Email para propostas comercial
+    $to = "dsnixagenciadigital@gmail.com"; // Email para propostas comercial
     $subject = "SOLICITAÇÃO DE PROPOSTA - $assuntoSolicitacao";
 
     // Corpo do e-mail
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $subjectCliente = "Solicitação de Proposta Comercial - $assuntoSolicitacao";
         $bodyCliente = "Prezado(a) $nome,\n\nAgradecemos por entrar em contato conosco. Recebemos sua solicitação de proposta e já estamos analisando todas as informações encaminhadas. Entraremos em contato em breve com você para entendimento da proposta e levantamento de requisitos.\n\nO Código da Proposta: #$codigoSolicitacao\n\nAtenciosamente,\nGabriel Castro Mateus | DSNIX";
 
-        $headersCliente = "From: email@gmail.com\r\n";
+        $headersCliente = "From: dsnixagenciadigital@gmail.com\r\n";
         $headersCliente .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
         if(mail($email, $subjectCliente, $bodyCliente, $headersCliente)){
